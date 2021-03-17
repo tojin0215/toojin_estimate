@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Home.css';
+
 class Home extends Component {
 
     constructor(props) {
@@ -117,53 +119,87 @@ class Home extends Component {
     render() {        
         return (
             <div>
+            <div className='Container'>
             <h3>성공의 파트너, 투진컴퍼니</h3>
 
             <form className="AddSalesForm">
-                <hr/>    
                 <h3>사전 인터뷰</h3>
-                <label>기업명 : <input type="text" id='companyName' value={this.state.companyName} onChange={this.handleChange}/></label><br/>
-                <label>사업자 종류</label><br/>
-                <label>
-                    <input type="radio" name="radioGroup" id='businessType1'
-                    checked={this.state.radioGroup['businessType1']} onChange={this.handleRadio}/>
-                    개인사업자
+                <div className='name'>
+                    <label>
+                        <p className='subject'>기업명</p> 
+                        <input className='textInput' type="text" id='companyName' value={this.state.companyName} onChange={this.handleChange}/>
+                    </label>
+                </div>
+                <div className='business'>
+                    <label>
+                        <p className='subject'>사업자 종류</p>
+                    </label>
+                    <label className='labelCheck'>
+                        <input className='btnRadio' type="radio" name="radioGroup" id='businessType1'
+                        checked={this.state.radioGroup['businessType1']} onChange={this.handleRadio}/>
+                        <span>개인사업자</span>
+                    </label>
+                    <label className='labelCheck'>
+                        <input className='btnRadio' type="radio" name="radioGroup" id='businessType2' checked={this.state.radioGroup['businessType2']} onChange={this.handleRadio}/>
+                        <span>법인사업자</span>
+                    </label>
+                    <div className='businessType'>
+                        <label>
+                            <p>업태</p> 
+                            <input className='textInput' type="text" id='status' value={this.state.status} onChange={this.handleChange}/>
+                        </label>
+                        <label>
+                            <p>업종</p>
+                            <input className='textInput' type="text" id='type' checked={this.state.type} onChange={this.handleChange}/>
+                        </label>
+                    </div>
+                    <label className='labelCheck'>
+                        <input className='checkBox' type="checkbox" id='businessType3' checked={this.state.businessType3} onChange={this.handleChange}/>
+                        <p className='subject'>성장유망업종 여부</p>
+                    </label>
+                    <label>
+                        <p>성장유망업종이란?</p>
+                    </label>
+                    <label>설명</label>
+                </div>
+                <label className='subject'>
+                    <p>기존 직원 정보를 입력해주세요</p>    
                 </label>
-                <br/>
                 <label>
-                    <input type="radio" name="radioGroup" id='businessType2' checked={this.state.radioGroup['businessType2']} onChange={this.handleRadio}/>
-                    법인사업자
+                    <p>4대보험 가입인원</p>
+                    <input className='numberInput' type="number" id='subscribers' value={this.state.subscribers} onChange={this.handleChange}/>
+                </label> 
+                <label className='labelCheck'>
+                    <p>최저임금준수여부</p>
+                    <input className='checkBox' type="checkbox" id='compliance1' checked={this.state.compliance1} onChange={this.handleChange}/>
                 </label>
-                <br/><br/>
-
-                <label>업태 : <input type="text" id='status' value={this.state.status} onChange={this.handleChange}/></label><br/>
-                <label>업종 : <input type="text" id='type' checked={this.state.type} onChange={this.handleChange}/></label><br/>
-                
                 <label>
-                성장유망업종 여부 : <input type="checkbox" id='businessType3' checked={this.state.businessType3} onChange={this.handleChange}/>
-                </label><br/>
-                <label>성장유망업종이란?</label><br/>
-                <label>설명</label><br/><br/>
+                    <p>4대보험 미가입인원</p>
+                    <input className='numberInput' type="number" id='unsubscribers' value={this.state.unsubscribers} onChange={this.handleChange}/>
+                </label>
+                <label className='labelCheck'>
+                    <p>최저임금을 준수하고 있습니다</p>
+                    <input className='checkBox' type="checkbox" id='compliance2' checked={this.state.compliance2} onChange={this.handleChange}/>
+                </label>
+                <label className='subject'>
+                    <p>추가 고용 계획을 입력해주세요</p>
+                    <label>인원 : <input className='numberInput' type="number" id='additionalEmployment1' value={this.state.additionalEmployment1} onChange={this.handleChange}/>명</label>
+                    <label>인당 월급 : <input className='numberInput' type="number" id='additionalEmployment2' value={this.state.additionalEmployment2} onChange={this.handleChange}/>만 원</label>
+                </label>
 
-                <label>기존 직원 정보를 입력해주세요</label><br/>
-                <label>4대보험 가입인원<input type="number" id='subscribers' value={this.state.subscribers} onChange={this.handleChange}/></label> 
-                <label>최저임금준수여부<input type="checkbox" id='compliance1' checked={this.state.compliance1} onChange={this.handleChange}/></label><br/>
-                <label>4대보험 미가입인원 <input type="number" id='unsubscribers' value={this.state.unsubscribers} onChange={this.handleChange}/></label>
-                <label>최저임금준수여부<input type="checkbox" id='compliance2' checked={this.state.compliance2} onChange={this.handleChange}/></label><br/><br/>
-                <label>추가 고용 계획을 입력해주세요</label><br/>
-                    <label>인원 : <input type="number" id='additionalEmployment1' value={this.state.additionalEmployment1} onChange={this.handleChange}/>명</label><br/>
-                    <label>인당 월급 : <input type="number" id='additionalEmployment2' value={this.state.additionalEmployment2} onChange={this.handleChange}/>만 원</label>
-                <br/>
-                <label>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label><input type="checkbox" id='check' checked={this.state.check} onChange={this.handleChange}/><br/><br/>
-                <label>{/*<input type="checkbox" id='proA' checked={this.state.proA} onChange={this.handleChange}/>*/}프로그램A(1~6개월)</label><label> : 1인 당 최대 190만 원 </label><br />
-                <label>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}프로그램B(최대30개월)</label><label> : 1인 당 75만 원</label><br />
-                <label>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}프로그램C(최대30개월)</label><label> : 1인 당 8만 원</label><br />
-                <br/><br/>
-                <button type="button" onClick={this.onClickForLink}> 상담하기 </button><br/>
-                <button type="button" onClick={this.handleOnClick}> 견적하기 </button><br/>
-                <button type="button" onClick={this.initOnClick}> 초기화 </button><br/>
+                <label>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label><input type="checkbox" id='check' checked={this.state.check} onChange={this.handleChange}/><br/>
+                <label>{/*<input type="checkbox" id='proA' checked={this.state.proA} onChange={this.handleChange}/>*/}프로그램A(1~6개월)</label>
+                <label> : 1인 당 최대 190만 원 </label>
+                <label>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}프로그램B(최대30개월)</label>
+                <label> : 1인 당 75만 원</label>
+                <label>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}프로그램C(최대30개월)</label>
+                <label> : 1인 당 8만 원</label>
+                <button type="button" onClick={this.onClickForLink}> 상담하기 </button>
+                <button type="button" onClick={this.handleOnClick}> 견적하기 </button>
+                <button type="button" onClick={this.initOnClick}> 초기화 </button>
                 <label>중소기업의 경영파트너, 투진컴퍼니</label>
             </form>
+        </div>
         </div>
         );
     }
