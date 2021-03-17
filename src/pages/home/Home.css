@@ -70,6 +70,9 @@ p {
     align-items:center;
     padding-bottom:1rem;
 }
+.AddSalesForm .labelCheck .subject {
+    font-size:1.8rem;
+}
 
 .AddSalesForm .btnRadio {
     width:1.4rem;
@@ -79,7 +82,7 @@ p {
 .AddSalesForm .checkBox {
     width:1.4rem;
     height:1.4rem;
-    margin:0;
+    margin:0 1rem;
  }
 
 .business {/*

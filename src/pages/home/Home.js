@@ -153,7 +153,7 @@ class Home extends Component {
                     </div>
                     <label className='labelCheck'>
                         <input className='checkBox' type="checkbox" id='businessType3' checked={this.state.businessType3} onChange={this.handleChange}/>
-                        <p className='subject'>성장유망업종 여부</p>
+                        <p className='subject'>성장유망업종</p>
                     </label>
                     <label>
                         <p>성장유망업종이란?</p>
