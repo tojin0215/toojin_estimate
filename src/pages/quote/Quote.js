@@ -12,15 +12,15 @@ class Quote extends Component {
     componentDidMount(){
         if(this.state.additionalEmployment1 > 0 && this.state.additionalEmployment2 > 0){
             //pro A 최대 지원금
-            if(this.state.additionalEmployment2 < 1900000){
-                this.setState({proA: (this.state.additionalEmployment2*0.9+100000)*6 * this.state.additionalEmployment1})
+            if(this.state.additionalEmployment2 < 200){
+                this.setState({proA: (this.state.additionalEmployment2*0.9+10)*6 * this.state.additionalEmployment1})
             }else{
-                this.setState({proA: 1900000*6 * this.state.additionalEmployment1})
+                this.setState({proA: 190*6 * this.state.additionalEmployment1})
             }
             //pro B 최대 지원금
-            this.setState({proB: this.state.additionalEmployment1*750000*30})
+            this.setState({proB: this.state.additionalEmployment1*75*30})
             //pro C 최대 지원금
-            this.setState({proC: this.state.additionalEmployment1*80000*30})
+            this.setState({proC: this.state.additionalEmployment1*8*30})
 
             /*this.setState({ 
                 totalMonthPay:this.state.additionalEmployment1*this.state.additionalEmployment2,
@@ -53,8 +53,8 @@ class Quote extends Component {
             
             this.setState({ 
                 totalMonthPay:this.state.additionalEmployment1*this.state.additionalEmployment2,
-                monthExpense :this.state.additionalEmployment1*150000 + 150000,
-                totalExpense :(this.state.additionalEmployment1*150000+150000)*36,
+                monthExpense :this.state.additionalEmployment1*15 + 15,
+                totalExpense :(this.state.additionalEmployment1*15+15)*36,
             })
             
 
@@ -84,23 +84,24 @@ class Quote extends Component {
                 <label>추가 고용 계획 : {this.state.additionalEmployment1}명</label><br /><br/>
                 <label>간이 견적표</label><br />
 
-                <label>총 월급여액 : {this.state.totalMonthPay}원</label><br/>
-                <label>월 비용 : {this.state.monthExpense}원</label><br/>
+
+                {/*<label>총 월급여액 : {this.state.totalMonthPay}원</label><br/>*/}
+                <label>월 비용 : {this.state.monthExpense}만 원</label><br/>
                 
                 <label>proA</label><br />
-                <label>총 비용 : {this.state.monthExpense *6}원</label><br/>
-                <label>최대지원금액 : {this.state.proA}원</label><br/>
-                <label>최대고객이익 : {this.state.proA - this.state.totalExpense}원</label><br/>
+                <label>총 비용 : {this.state.monthExpense * 6}만 원</label><br/>
+                <label>최대지원금액 : {this.state.proA}만 원</label><br/>
+                <label>최대고객이익 : {this.state.proA - (this.state.totalMonthPay+this.state.monthExpense) * 36}만 원</label><br/>
 
                 <label>proB</label><br />
-                <label>총 비용 : {this.state.monthExpense *36}원</label><br/>
-                <label>최대지원금액 : {this.state.proB}원</label><br/>
-                <label>최대고객이익 : {this.state.proB - this.state.totalExpense}원</label><br/>
+                <label>총 비용 : {this.state.monthExpense * 30}만 원</label><br/>
+                <label>최대지원금액 : {this.state.proB}만 원</label><br/>
+                <label>최대고객이익 : {this.state.proB - (this.state.totalMonthPay+this.state.monthExpense) * 36}만 원</label><br/>
 
                 <label>proC</label><br />
-                <label>총 비용 : {this.state.monthExpense *36}원</label><br/>
-                <label>최대지원금액 : {this.state.proC}원</label><br/>
-                <label>최대고객이익 : {this.state.proC - this.state.totalExpense}원</label><br/><br/>
+                <label>총 비용 : {this.state.monthExpense *30}만 원</label><br/>
+                <label>최대지원금액 : {this.state.proC}만 원</label><br/>
+                <label>최대고객이익 : {this.state.proC - (this.state.totalMonthPay+this.state.monthExpense)*36}만 원</label><br/><br/>
 
                 <label>위 견적은 간이 견적으로 실제 견적과 차이가 있을 수 있습니다.</label><br/><br/>
 

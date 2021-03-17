@@ -29,6 +29,7 @@ class Home extends Component {
             monthExpense :0,
             totalExpense :0,
             maxCusProfit : 0,
+            check: false,
         };
         this.handleDateChange = this.handleDateChange.bind(this);
     };
@@ -99,6 +100,7 @@ class Home extends Component {
             monthExpense :0,
             totalExpense :0,
             maxCusProfit : 0,
+            check: false,
         },() => {localStorage.setItem('data', JSON.stringify(this.state));});
     }
 
@@ -149,10 +151,10 @@ class Home extends Component {
                 <label>4대보험 미가입인원 <input type="number" id='unsubscribers' value={this.state.unsubscribers} onChange={this.handleChange}/></label>
                 <label>최저임금준수여부<input type="checkbox" id='compliance2' checked={this.state.compliance2} onChange={this.handleChange}/></label><br/><br/>
                 <label>추가 고용 계획을 입력해주세요</label><br/>
-                    <input type="number" id='additionalEmployment1' value={this.state.additionalEmployment1} onChange={this.handleChange}/><br/>
-                    <input type="number" id='additionalEmployment2' value={this.state.additionalEmployment2} onChange={this.handleChange}/>
+                    <label>인원 : <input type="number" id='additionalEmployment1' value={this.state.additionalEmployment1} onChange={this.handleChange}/>명</label><br/>
+                    <label>인당 월급 : <input type="number" id='additionalEmployment2' value={this.state.additionalEmployment2} onChange={this.handleChange}/>만 원</label>
                 <br/>
-                <label>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label><br/><br/>
+                <label>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label><input type="checkbox" id='check' checked={this.state.check} onChange={this.handleChange}/><br/><br/>
                 <label>{/*<input type="checkbox" id='proA' checked={this.state.proA} onChange={this.handleChange}/>*/}프로그램A(1~6개월)</label><label> : 1인 당 최대 190만 원 </label><br />
                 <label>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}프로그램B(최대30개월)</label><label> : 1인 당 75만 원</label><br />
                 <label>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}프로그램C(최대30개월)</label><label> : 1인 당 8만 원</label><br />
