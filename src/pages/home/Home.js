@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 import './Home.css';
 
+const meta = document.createElement('meta');
+meta.name = "viewport";
+meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover";
+document.getElementsByTagName('head')[0].appendChild(meta);
+
 class Home extends Component {
 
     constructor(props) {
@@ -33,6 +38,10 @@ class Home extends Component {
             maxCusProfit : 0,
         };
         this.handleDateChange = this.handleDateChange.bind(this);
+        const meta = document.createElement('meta');
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover";
+        document.getElementsByTagName('head')[0].appendChild(meta);
     };
 
     handleChange = (e) => { 
@@ -196,23 +205,29 @@ class Home extends Component {
                         <input className='numberInput' type="number" id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>
                     </label>
                 </label>
-                <label>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label>
+                <label className='agreement'>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label>
                 <div className='program'>
                     <label className='subject'>
                         <p>지원 프로그램</p>
                     </label>
-                    <label>{/*<input type="checkbox" id='proA' checked={this.state.proA} onChange={this.handleChange}/>*/}
-                    청년 디지털 지원 사업(1~6개월)</label>
-                    <label> : 1인 당 최대 월190만 원 </label>
-                    <label>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}청년추가고용 장려금 지원사업(최대30개월)</label>
-                    <label> : 1인 당 월75만 원</label>
-                    <label>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}일자리 안정자금 사업(최대30개월)</label>
-                    <label> : 1인 당 월8만 원</label>
+
+                    <label className='prName'>{/*<input type="checkbox" id='proA' checked={this.state.proA} onChange={this.handleChange}/>*/}
+                        <p>청년 디지털 지원 사업(1~6개월)</p>
+                    </label>
+                    <label className='prContent'> : 1인 당 최대 월190만 원 </label>
+                    <label className='prName'>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}
+                        <p>청년추가고용 장려금 지원사업(최대30개월)</p>
+                    </label>
+                    <label className='prContent'> : 1인 당 월75만 원</label>
+                    <label className='prName'>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}
+                        <p>일자리 안정자금 사업<br/>(최대30개월)</p>
+                    </label>
+                    <label className='prContent'> : 1인 당 월8만 원</label>
                 </div>
-                <button type="button" onClick={this.onClickForLink}> 상담하기 </button>
-                <button type="button" onClick={this.handleOnClick}> 견적하기 </button>
-                <button type="button" onClick={this.initOnClick}> 초기화 </button>
-                <label>중소기업의 경영파트너, 투진컴퍼니</label>
+                <button className='btnConsult btnResult' type="button" onClick={this.onClickForLink}> 상담하기 </button>
+                <button className='btnEstimate' type="button" onClick={this.handleOnClick}> 견적하기 </button>
+                <button className='btnReset' type="button" onClick={this.initOnClick}> 초기화 </button>
+                <label className='footerMent'>중소기업의 경영파트너, 투진컴퍼니</label>
             </form>
         </div>
         </div>

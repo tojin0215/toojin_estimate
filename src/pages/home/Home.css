@@ -1,7 +1,7 @@
 
 input[type=number]::-webkit-inner-spin-button {  
-    height: 3rem;
-    padding:0 0.4rem;
+    height: 2.5rem;
+    padding:0.4rem 0.4rem;
 }
 
 p {
@@ -20,6 +20,7 @@ p {
 .Container h3{
     text-align:center;
     font-size:xx-large;
+    font-weight:400;
 }
 
 .AddSalesForm {
@@ -32,7 +33,7 @@ p {
 
 .AddSalesForm h3{
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 3rem;
     color: #000;
     margin-bottom: 50px;
@@ -160,4 +161,103 @@ p {
 }
 .recruit label p {
     font-size:1.6rem;
+}
+
+.agreement {
+    text-align:center;
+    color:#696969;
+}
+
+.program {
+    padding:2rem 0;
+    margin:2rem 0;
+    border:1px solid #67C7ba;
+    border-right:none;
+    border-left:none;
+    text-align:center;
+}
+.program .prName p {
+    font-size:1.6rem;
+}
+.program .prContent {
+    font-size:1.4rem;
+    padding-bottom:2rem;
+}
+
+
+.AddSalesForm button {
+    height:3rem;
+    width:20rem;
+    margin:5px auto;
+    background-color:#67C7ba;
+    border:none;
+    border-radius:0.4rem;
+    color:#fff;
+    font-size:1.2rem;
+}
+
+.AddSalesForm .btnReset {
+    background-color:#c76767;
+}
+
+.footerMent {
+    text-align:center;
+    padding:2rem 0;
+}
+
+@media screen and (max-width:768px) {
+input[type=number]::-webkit-inner-spin-button {  
+    height: 2.5rem;
+    padding:0.4rem 1rem;
+}
+h3, .name, .business {
+    width:100%
+}
+.Container h3 {
+    font-size:1.4rem;
+}
+.AddSalesForm h3 {
+    font-size:1.6rem;
+}
+.AddSalesForm p {
+    padding: 5px 0;
+    font-size:1.6rem;
+}
+.AddSalesForm span {
+    font-size:1.4rem;
+}
+.AddSalesForm .labelCheck {
+    align-items:flex-start;
+}
+.business {
+    padding-bottom:1rem;
+}
+.business .labelCheck:nth-child(5){
+    align-items:center;
+    justify-content:flex-end;
+    padding:0 1rem 0.4rem 0;
+}
+.businessType {
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.businessType > label > p {
+    font-size:1.4rem;
+}
+.member > div > label > p {
+    font-size:1.4rem;
+}
+.recruit label p {
+    font-size:1.4rem;
+}
+.program .subject {
+    padding-bottom:1rem;
+}
+.program .prName p{
+    font-size:1.4rem;
+}
+.program .prContent {
+    font-size:1.4rem;
+    color:#67C7ba;
+}
 }
