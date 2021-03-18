@@ -1,0 +1,86 @@
+.container {
+    padding:1rem;
+}
+
+.container h2{
+    font-size:2rem;
+    color:#67C7ba;
+}
+.container label {
+    padding:1rem 0;
+    font-size:2rem;
+    color:#696969;
+    font-weight:500;
+}
+.container span {
+    font-weight:300;
+    font-size:1.4rem;
+}
+.company {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border-top:1px solid #67C7ba;
+}
+.companyBasic {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:2rem 0;
+}
+.companyBasic label {
+    font-size:1.4rem;
+    text-align:left;
+}
+.companyBasic label:last-child{
+    padding-top:0;
+}
+.companyBasic p {
+    font-size:2rem;
+    color:#67C7ba
+}
+.companyType {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    border-top:1px solid #67C7ba;
+    width:100%;
+    padding:2rem 0;
+}
+.companyType label {
+    font-size:1.4rem;
+    padding:0.4rem;
+    text-align:center;
+}
+.member {
+    padding:2rem 0;
+    border-top:1px solid #67C7ba;
+}
+.member label {
+    text-align:center;
+    padding:0;
+    width:100%;
+}
+.member label:first-child {
+    padding:1rem 0;
+}
+.member label p {
+    font-size:1.6rem;
+}
+.plan {
+    width:100%;
+    text-align:center;
+    border-top:1px solid #67C7ba;
+    display:flex;
+    flex-direction:column;
+}
+.plan span {
+    font-size:2rem;
+    font-weight:500;
+    padding-top:2rem;
+}
+.plan p {
+    font-size:1.8rem;
+    padding:1.6rem 0;
+}
