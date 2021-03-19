@@ -100,15 +100,15 @@ class Quote extends Component {
                 </label>
                 <label>성장유망업종 : {this.state.businessType3?"O":"X"}</label>
             </div>
-            <div className='member'>
+            <div className='quoteMember'>
                 <label>직원 정보</label>
                 <label>
-                    <span>4대보험 가입 직원 수</span>
+                    <span>4대보험 가입</span>
                     <p>{this.state.subscribers} 명</p>
                 </label>
                 <label>
-                    <span>4대보험 미가입 직원 수</span>
-                    <p>{this.state.unsubscribers}명</p>
+                    <span>4대보험 미가입</span>
+                    <p>{this.state.unsubscribers} 명</p>
                 </label>
             </div>
             <label className='plan'>
@@ -116,31 +116,63 @@ class Quote extends Component {
                 <p>{this.state.additionalEmployment1}명</p>
             </label>
             </div>
-            <label>간이 견적표</label>
+            <div className='quoteTable'>
+                <label className='subject'>간이 견적표</label>
+                <label className='tCommon'>
+                    월 비용
+                    <p>{this.state.monthExpense} 원</p>
+                </label>
+                <div className='proA'>
+                <label className='subject'>청년 디지털 지원 사업</label>
+                <label>
+                    총 비용
+                    <p>{this.state.monthExpense *6} 원</p>
+                </label>
+                <label>
+                    최대지원금액
+                    <p>{this.state.proA} 원</p>
+                </label>
+                <label>
+                    최대고객이익
+                    <p>{this.state.proA - this.state.totalExpense} 원</p>
+                </label>
+                </div>
+                <div className='proB'>
+                <label className='subject'>청년추가고용 장려금 지원사업</label>
+                <label>
+                    총 비용
+                    <p>{this.state.monthExpense *36} 원</p>
+                </label>
+                <label>
+                    최대지원금액
+                    <p>{this.state.proB} 원</p>
+                </label>
+                <label>
+                    최대고객이익
+                    <p>{this.state.proB - this.state.totalExpense} 원</p>
+                </label>
+                </div>
+                <div className='proC'>
+                <label className='subject'>일자리 안정자금 사업</label>
+                <label>
+                    총 비용
+                    <p>{this.state.monthExpense *36} 원</p>
+                </label>
+                <label>
+                    최대지원금액
+                    <p>{this.state.proC} 원</p>
+                </label>
+                <label>
+                    최대고객이익
+                    <p>{this.state.proC - this.state.totalExpense} 원</p>
+                </label>
+                </div>
+                <label className='quoteMent'>위 견적은 간이 견적으로 실제 견적과 차이가 있을 수 있습니다.</label>
+            </div>
 
-            <label>총 월급여액 : {this.state.totalMonthPay}원</label>
-            <label>월 비용 : {this.state.monthExpense}원</label>
-            
-            <label>proA</label>
-            <label>총 비용 : {this.state.monthExpense *6}원</label>
-            <label>최대지원금액 : {this.state.proA}원</label>
-            <label>최대고객이익 : {this.state.proA - this.state.totalExpense}원</label>
-
-            <label>proB</label>
-            <label>총 비용 : {this.state.monthExpense *36}원</label>
-            <label>최대지원금액 : {this.state.proB}원</label>
-            <label>최대고객이익 : {this.state.proB - this.state.totalExpense}원</label>
-
-            <label>proC</label>
-            <label>총 비용 : {this.state.monthExpense *36}원</label>
-            <label>최대지원금액 : {this.state.proC}원</label>
-            <label>최대고객이익 : {this.state.proC - this.state.totalExpense}원</label>
-
-            <label>위 견적은 간이 견적으로 실제 견적과 차이가 있을 수 있습니다.</label>
-
-            <label>기업정보를 투진컴퍼니에 제공하는 것에 동의합니다.</label>
-            <label>중소기업의 든든한 파트너, 투진컴퍼니</label>
-            <button className="btn btn-lg btn-primary btn-block" type="button" onClick={this.handleOnClick}> 돌아가기 </button>
+            <label className='quoteAgree'>기업정보를 투진컴퍼니에 제공하는 것에 동의합니다.</label>
+            <button className="btn btn-lg btn-primary btn-block btnQuoteBack" type="button" onClick={this.handleOnClick}> 돌아가기 </button>
+            <label className='footerMent'>중소기업의 든든한 파트너, 투진컴퍼니</label>
         </form>
         </div>
         );

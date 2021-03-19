@@ -21,17 +21,22 @@
     flex-direction:column;
     align-items:center;
     border-top:1px solid #67C7ba;
+    border-bottom:1px solid #67C7ba;
+    padding-bottom:1rem;
 }
 .companyBasic {
     width:100%;
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-    padding:2rem 0;
+    padding-top:2rem;
 }
 .companyBasic label {
     font-size:1.4rem;
     text-align:left;
+}
+.companyBasic label:first-child{
+    padding-bottom:0.2rem;
 }
 .companyBasic label:last-child{
     padding-top:0;
@@ -42,45 +47,140 @@
 }
 .companyType {
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+    flex-wrap:wrap;
     align-items:flex-start;
-    border-top:1px solid #67C7ba;
     width:100%;
-    padding:2rem 0;
+    padding-bottom:0.2rem;
 }
 .companyType label {
+    box-sizing:border-box;
+    width:50%;
     font-size:1.4rem;
     padding:0.4rem;
+    text-align:left;
+}
+.companyType label:last-child {
+    width:100%;
+    text-align:left;
+    font-weight:300;
+    font-size:1.4rem;
+    color:#67C7ba;
+}
+.companyType label p {
     text-align:center;
 }
-.member {
-    padding:2rem 0;
-    border-top:1px solid #67C7ba;
-}
-.member label {
-    text-align:center;
-    padding:0;
+.quoteMember {
+    display:flex;
+    flex-wrap:wrap;
     width:100%;
 }
-.member label:first-child {
-    padding:1rem 0;
+.quoteMember label {
+    text-align:left;
+    padding:0.4rem;
+    width:50%;
+    box-sizing:border-box;
 }
-.member label p {
+.quoteMember label:first-child {
+    padding:1rem 0;
+    width:100%;
+    text-align:left;
+    display:none;
+}
+.quoteMember label span {
+    font-weight:300;
+    font-size:1.2rem;
+}
+.quoteMember label p {
     font-size:1.6rem;
+    text-align:center;
 }
 .plan {
     width:100%;
     text-align:center;
-    border-top:1px solid #67C7ba;
     display:flex;
     flex-direction:column;
 }
 .plan span {
-    font-size:2rem;
+    font-size:1.4rem;
     font-weight:500;
-    padding-top:2rem;
 }
 .plan p {
-    font-size:1.8rem;
-    padding:1.6rem 0;
+    font-size:1.6rem;
+    color:#67C7ba;
+}
+.quoteTable {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    padding-top:2rem;
+}
+.quoteTable .tCommon {
+    width:100%;
+    font-size:1.4rem;
+    text-align:center;
+    font-weight:300;
+}
+.quoteTable .tCommon p {
+    font-weight:500;
+}
+.quoteTable div {
+    display:flex;
+    flex-wrap:wrap;
+    border:1px solid #67C7ba;
+    border-radius:1.2rem;
+    padding:1rem 0.4rem;
+    margin-bottom:0.4rem;
+    width:100%;
+}
+.quoteTable div label {
+    width:100%;
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:400;
+    padding:0.6rem 0;
+}
+.quoteTable .subject {
+    font-size:1.4rem;
+    font-weight:800;
+}
+.quoteTable div label p {
+    font-weight:500;
+    font-size:1.6rem;
+    color:#67C7ba;
+}
+.quoteTable div label:nth-child(2) p{
+    font-size:1.4rem;
+    color:#C76767;
+}
+.quoteTable .quoteMent {
+    font-size:0.8rem;
+    color:#67C7ba;
+    width:100%;
+    text-align:center;
+}
+.container .quoteAgree {
+    font-size:1rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.container .btnQuoteBack {
+    height:3rem;
+    width:20rem;
+    margin:2rem auto;
+    background-color:#67C7ba;
+    border:none;
+    border-radius:0.4rem;
+    color:#fff;
+    font-size:1.2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container .footerMent {
+    font-size:1.2rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
 }
