@@ -98,7 +98,10 @@ class Quote extends Component {
                     <span>업종</span>
                     <p>{this.state.type}</p>
                 </label>
-                <label>성장유망업종 : {this.state.businessType3?"O":"X"}</label>
+                <label>
+                    <span>성장유망업종</span>
+                    <p>{this.state.businessType3?"O":"X"}</p>
+                </label>
             </div>
             <div className='quoteMember'>
                 <label>직원 정보</label>
@@ -110,11 +113,11 @@ class Quote extends Component {
                     <span>4대보험 미가입</span>
                     <p>{this.state.unsubscribers} 명</p>
                 </label>
+                <label className='plan'>
+                    <span>채용 예정 직원</span>
+                    <p>{this.state.additionalEmployment1}명</p>
+                </label>
             </div>
-            <label className='plan'>
-                <span>채용 예정 직원</span>
-                <p>{this.state.additionalEmployment1}명</p>
-            </label>
             </div>
             <div className='quoteTable'>
                 <label className='subject'>간이 견적표</label>

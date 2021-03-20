@@ -62,11 +62,24 @@
 }
 .companyType label:last-child {
     width:100%;
+    max-width:20rem;
     text-align:left;
     font-weight:400;
     font-size:1.2rem;
     color:#696969;
-    padding:0 0.4rem;
+    margin:0 auto;
+    padding:0.4rem;
+    display:flex;
+    flex-direction:row;
+    border-radius:1rem;
+    background-color:#e5f3f1;
+}
+.companyType label:last-child span {
+    flex:1;
+    text-align:center;
+}
+.companyType label:last-child p {
+    flex:1;
 }
 .companyType label p {
     text-align:center;
@@ -98,26 +111,23 @@
     text-align:center;
     color:#000;
 }
-.plan {
+.quoteMember .plan {
     width:100%;
-    text-align:center;
+    max-width:20rem;
     display:flex;
+    margin:0 auto;
     flex-direction:row;
-    padding:0;
+    border-radius:1rem;
+    background-color:#e5f3f1;
 }
 .plan span {
-    font-size:1.2rem;
-    font-weight:400;
     flex:1;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 .plan p {
-    font-size:1.4rem;
-    color:#000;
     flex:1;
-    text-align:left;
 }
 .quoteTable {
     display:flex;
@@ -146,6 +156,7 @@
     padding:1rem 0.4rem;
     margin-bottom:2rem;
     width:100%;
+    max-width:768px;
 }
 .quoteTable div label {
     width:100%;
@@ -203,6 +214,7 @@
 .container .btnQuoteBack {
     height:3rem;
     width:100%;
+    max-width:425px;
     margin:2rem auto;
     background-color:#67C7ba;
     border:none;
@@ -218,4 +230,56 @@
     width:100%;
     display:flex;
     justify-content:center;
+}
+
+@media screen and (min-width:426px) {
+    .container h2 {
+        padding:0 15%;
+    }
+    .quoteTable > .subject {
+        text-align:center;
+    }
+    .companyBasic {
+        align-items: center;
+    }
+    .companyBasic label {
+        text-align: center;
+    }
+    .companyType label {
+        text-align:center;
+    }
+    .quoteMember label {
+        text-align:center;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:768px) {
+    .companyType label:last-child {
+        text-align:center;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .companyType {
+        width:70%;
+    }
+    .quoteMember {
+        width:70%;
+    }
+    .quoteTable div {
+        margin:0 auto 2rem;
+    }
+}
+@media screen and (min-width:1025px) {
+    .container h2 {
+        padding:0 20%;
+    }
+    .companyType {
+        width:60%;
+    }
+    .quoteMember {
+        width:60%;
+    }
+    .quoteTable div {
+        margin:0 auto 2rem;
+    }
 }
