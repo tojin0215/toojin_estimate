@@ -127,7 +127,7 @@ class Home extends Component {
         return (
             <div>
             <div className='Container'>
-            <h3>성공의 파트너, 투진컴퍼니</h3>
+            <h3>성공의 파트너&#44; 투진컴퍼니</h3>
 
             <form className="AddSalesForm">
                 <h3>사전 인터뷰</h3>
@@ -165,13 +165,28 @@ class Home extends Component {
                         <p className='subject'>성장유망업종</p>
                     </label>
                     <label className='explain'>
-                        <p>성장유망업종이란?</p>
-                        <label>설명</label>
+                        <p>성장유망업종이란&#63;</p>
+                        <label>
+                            <h6>사업 지침에 따른 특별 지원대상 업종</h6>
+                            <p>
+                            ① 벤처기업<br/>
+                            ② 지식서비스산업<br/>
+                            ③ 문화콘텐츠산업<br/>
+                            ④ 신･재생에너지산업분야 관련 업종<br/>
+                            ⑤ 성장유망업종(전․후방산업)<br/>
+                            ⑥ 청년 창업기업<br/>
+                            ⑦ 혁신형 중소기업(이노비즈, 메인비즈),  IT직무를 수행할 수 있는 기업<br/>
+                            <br/>
+                            <span>
+                                문의을 통해 해당 사항에 대한 안내 및 자세한 상담을 할 수 있습니다.
+                            </span> 
+                            </p>
+                        </label>
                     </label>
                 </div>
                 <div className='member'>
                     <label className='subject'>
-                        <p>기존 직원 정보를 입력해주세요</p>    
+                        <p>기존 직원 정보</p>    
                     </label>
                     <div>
                         <label>
@@ -205,29 +220,31 @@ class Home extends Component {
                         <input className='numberInput' type="number" id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>
                     </label>
                 </label>
-                <label className='agreement'>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label>
+                <label className='agreement'>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다&#46;</label>
                 <div className='program'>
                     <label className='subject'>
                         <p>지원 프로그램</p>
                     </label>
 
                     <label className='prName'>{/*<input type="checkbox" id='proA' checked={this.state.proA} onChange={this.handleChange}/>*/}
-                        <p>청년 디지털 지원 사업(1~6개월)</p>
+                        <p>청년 디지털 지원 사업<br />&#40;1~6개월&#41;</p>
                     </label>
-                    <label className='prContent'> : 1인 당 최대 월190만 원 </label>
+                    <label className='prContent'> 1인 당 최대 월190만 원
+                    <p className='prContentSub'>&#40;급여 200만원 이하 &#58; 90&#37; &#43; 10만원 지원&#41;</p>
+                    </label>
                     <label className='prName'>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}
-                        <p>청년추가고용 장려금 지원사업(최대30개월)</p>
+                        <p>청년추가고용 장려금 지원사업<br />&#40;최대30개월&#41;</p>
                     </label>
-                    <label className='prContent'> : 1인 당 월75만 원</label>
+                    <label className='prContent'> 1인 당 월75만 원</label>
                     <label className='prName'>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}
-                        <p>일자리 안정자금 사업<br/>(최대30개월)</p>
+                        <p>일자리 안정자금 사업<br/>&#40;최대30개월&#41;</p>
                     </label>
-                    <label className='prContent'> : 1인 당 월8만 원</label>
+                    <label className='prContent'> 1인 당 월8만 원</label>
                 </div>
                 <button className='btnConsult btnResult' type="button" onClick={this.onClickForLink}> 상담하기 </button>
                 <button className='btnEstimate' type="button" onClick={this.handleOnClick}> 견적하기 </button>
                 <button className='btnReset' type="button" onClick={this.initOnClick}> 초기화 </button>
-                <label className='footerMent'>중소기업의 경영파트너, 투진컴퍼니</label>
+                <label className='footerMent'>중소기업의 경영파트너&#44; 투진컴퍼니</label>
             </form>
         </div>
         </div>

@@ -50,28 +50,28 @@ p {
     width:100%;
 }
 .AddSalesForm p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #696969;
     font-weight: 500;
     letter-spacing: -0.65px;
     padding:5px 0;
-
 }
 .AddSalesForm span {
-    font-size:1.4rem;
+    font-size:1.2rem;
 }
 .AddSalesForm .textInput {
-    height:50px;
+    height:2.8rem;
     border:1px solid #cecece;
-    margin-bottom:1rem;
-    text-indent:2rem;
+    border-radius:0.4rem;
+    margin-bottom:2rem;
+    text-indent:1rem;
     color: #949494;
     font-size: 1.2rem;
 }
 .AddSalesForm .numberInput {
     height:50px;
+    margin:.4rem 0;
     border:1px solid #cecece;
-    margin-bottom:1rem;
     text-indent:2rem;
     color: #949494;
     font-size: 1.2rem;
@@ -79,11 +79,12 @@ p {
 .AddSalesForm .labelCheck{
     display:flex;
     flex-direction:row;
-    align-items:flex-start;
-    padding-bottom:1rem;
+    align-items:center;
+    padding:.6rem 0;
 }
 .AddSalesForm .labelCheck .subject {
-    font-size:1.6rem;
+    font-size:1.4rem;
+    color:#000;
 }
 
 .AddSalesForm .btnRadio {
@@ -92,8 +93,8 @@ p {
     margin:0 1rem 0 0;
 }
 .AddSalesForm .checkBox {
-    width:1.4rem;
-    height:1.4rem;
+    width:1.2rem;
+    height:1.2rem;
     margin:0 1rem;
  }
 
@@ -109,9 +110,26 @@ p {
 .business .explain {
     font-size:1.4rem;
     text-align:center;
-    border:1px solid #696969;
+    border:0px solid #696969;
+    border-radius:1rem;
+    background-color:#eee;
     padding:1rem;
     margin-bottom:2rem;
+    height:10rem;
+    overflow:auto;
+    white-space:normal;
+ }
+ .business .explain h6 {
+     margin:1rem 0;
+ }
+ .business .explain p:last-child {
+     text-align:left;
+ }
+ .business .explain p span {
+     font-size:1rem;
+     font-weight:400;
+     text-align:center;
+     
  }
 
 .businessType {
@@ -125,7 +143,10 @@ p {
     padding:0 1rem;
 }
 .businessType > label > p {
-    font-size:1.4rem;
+    font-size:1.2rem;
+}
+.businessType .textInput {
+    margin-bottom:.4rem;
 }
 
 .member {
@@ -140,17 +161,20 @@ p {
 .member > div {
     flex:50%;
     box-sizing:border-box;
-    padding:0 1rem;
+    padding:.8rem 1rem;
 }
 .member > div > label > p {
-    font-size:1.4rem;
+    font-size:1.2rem;
+    color:#000;
 }
 .member div .labelCheck {
     justify-content:flex-end;
+    padding:0;
 }
 .member div .labelCheck p {
-    font-size:1.4rem;
+    font-size:1.2rem;
     padding:0;
+    font-weight:300;
 }
 .AddSalesForm .recruit {
     display:flex;
@@ -168,7 +192,8 @@ p {
     padding:0 1rem;
 }
 .recruit label p {
-    font-size:1.4rem;
+    font-size:1.2rem;
+    color:#000;
 }
 
 .agreement {
@@ -188,17 +213,23 @@ p {
     padding-bottom:1rem;
 }
 .program .prName p {
-    font-size:1.4rem;
+    font-size:1.2rem;
+    color:#000;
 }
 .program .prContent {
     font-size:1.4rem;
     padding-bottom:2rem;
     color:#67C7ba;
 }
+.program .prContentSub {
+    font-size:1.1rem;
+    font-weight:300;
+    padding:0;
+}
 
 
 .AddSalesForm button {
-    height:3rem;
+    height:2.6rem;
     width:100%;
     max-width:20rem;
     margin:5px auto;
@@ -217,8 +248,11 @@ p {
     text-align:center;
     padding:2rem 0;
 }
-@media screen and (max-width:425px) {
-}
 
-@media screen and (min-width:426px) and (max-width:768px) {
+@media screen and (min-width:426px) {
+    .business .explain {
+        padding:2rem;
+        max-width:768px;
+        margin:0 auto;
+    }
 }
