@@ -112,7 +112,7 @@ class Quote extends Component {
                 </label>
             </div>
             <label className='plan'>
-                <span>채용 계획</span>
+                <span>채용 예정 직원</span>
                 <p>{this.state.additionalEmployment1}명</p>
             </label>
             </div>
@@ -120,51 +120,51 @@ class Quote extends Component {
                 <label className='subject'>간이 견적표</label>
                 <label className='tCommon'>
                     월 비용
-                    <p>{this.state.monthExpense} 원</p>
+                    <p>{this.state.monthExpense} <span>원</span></p>
                 </label>
                 <div className='proA'>
                 <label className='subject'>청년 디지털 지원 사업</label>
                 <label>
                     총 비용
-                    <p>{this.state.monthExpense *6} 원</p>
+                    <p>{this.state.monthExpense *6} <span>원</span></p>
                 </label>
                 <label>
                     최대지원금액
-                    <p>{this.state.proA} 원</p>
+                    <p>{this.state.proA} <span>원</span></p>
                 </label>
                 <label>
                     최대고객이익
-                    <p>{this.state.proA - this.state.totalExpense} 원</p>
+                    <p>{this.state.proA - this.state.totalExpense} <span>원</span></p>
                 </label>
                 </div>
                 <div className='proB'>
-                <label className='subject'>청년추가고용 장려금 지원사업</label>
+                <label className='subject'>청년추가고용 장려금 <br />지원사업</label>
                 <label>
                     총 비용
-                    <p>{this.state.monthExpense *36} 원</p>
+                    <p>{this.state.monthExpense *36} <span>원</span></p>
                 </label>
                 <label>
                     최대지원금액
-                    <p>{this.state.proB} 원</p>
+                    <p>{this.state.proB} <span>원</span></p>
                 </label>
                 <label>
                     최대고객이익
-                    <p>{this.state.proB - this.state.totalExpense} 원</p>
+                    <p>{this.state.proB - this.state.totalExpense} <span>원</span></p>
                 </label>
                 </div>
                 <div className='proC'>
                 <label className='subject'>일자리 안정자금 사업</label>
                 <label>
                     총 비용
-                    <p>{this.state.monthExpense *36} 원</p>
+                    <p>{this.state.monthExpense *36} <span>원</span></p>
                 </label>
                 <label>
                     최대지원금액
-                    <p>{this.state.proC} 원</p>
+                    <p>{this.state.proC} <span>원</span></p>
                 </label>
                 <label>
                     최대고객이익
-                    <p>{this.state.proC - this.state.totalExpense} 원</p>
+                    <p>{this.state.proC - this.state.totalExpense} <span>원</span></p>
                 </label>
                 </div>
                 <label className='quoteMent'>위 견적은 간이 견적으로 실제 견적과 차이가 있을 수 있습니다.</label>

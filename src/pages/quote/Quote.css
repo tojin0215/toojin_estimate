@@ -14,13 +14,12 @@
 }
 .container span {
     font-weight:300;
-    font-size:1.4rem;
+    font-size:1.2rem;
 }
 .company {
     display:flex;
     flex-direction:column;
     align-items:center;
-    border-top:1px solid #67C7ba;
     border-bottom:1px solid #67C7ba;
     padding-bottom:1rem;
 }
@@ -29,7 +28,8 @@
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-    padding-top:2rem;
+    padding-top:1rem;
+    border-bottom:1px solid #67C7ba;
 }
 .companyBasic label {
     font-size:1.4rem;
@@ -43,7 +43,7 @@
 }
 .companyBasic p {
     font-size:2rem;
-    color:#67C7ba
+    color:#000;
 }
 .companyType {
     display:flex;
@@ -51,7 +51,7 @@
     flex-wrap:wrap;
     align-items:flex-start;
     width:100%;
-    padding-bottom:0.2rem;
+    padding:1.4rem 0 0 0;
 }
 .companyType label {
     box-sizing:border-box;
@@ -63,12 +63,14 @@
 .companyType label:last-child {
     width:100%;
     text-align:left;
-    font-weight:300;
-    font-size:1.4rem;
-    color:#67C7ba;
+    font-weight:400;
+    font-size:1.2rem;
+    color:#696969;
+    padding:0 0.4rem;
 }
 .companyType label p {
     text-align:center;
+    color:#000;
 }
 .quoteMember {
     display:flex;
@@ -92,22 +94,30 @@
     font-size:1.2rem;
 }
 .quoteMember label p {
-    font-size:1.6rem;
+    font-size:1.4rem;
     text-align:center;
+    color:#000;
 }
 .plan {
     width:100%;
     text-align:center;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+    padding:0;
 }
 .plan span {
-    font-size:1.4rem;
-    font-weight:500;
+    font-size:1.2rem;
+    font-weight:400;
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 .plan p {
-    font-size:1.6rem;
-    color:#67C7ba;
+    font-size:1.4rem;
+    color:#000;
+    flex:1;
+    text-align:left;
 }
 .quoteTable {
     display:flex;
@@ -117,12 +127,16 @@
 }
 .quoteTable .tCommon {
     width:100%;
-    font-size:1.4rem;
+    font-size:1.2rem;
     text-align:center;
     font-weight:300;
+    border-top:1px solid #d9f1ee;
+    border-bottom:1px solid #d9f1ee;
+    margin-bottom:2rem;
 }
 .quoteTable .tCommon p {
     font-weight:500;
+    font-size:1.4rem;
 }
 .quoteTable div {
     display:flex;
@@ -130,7 +144,7 @@
     border:1px solid #67C7ba;
     border-radius:1.2rem;
     padding:1rem 0.4rem;
-    margin-bottom:0.4rem;
+    margin-bottom:2rem;
     width:100%;
 }
 .quoteTable div label {
@@ -140,14 +154,34 @@
     font-weight:400;
     padding:0.6rem 0;
 }
+.quoteTable span {
+    font-size:1.2rem;
+    color:#696969;
+    font-weight:300;
+    text-indent:1rem;
+}
 .quoteTable .subject {
     font-size:1.4rem;
-    font-weight:800;
+    font-weight:600;
+    width:100%;
+    padding:1rem 2rem;
+    color:#000;
+}
+.quoteTable > .subject {
+    font-size:1.6rem;
+    padding:1rem 0;
+    font-weight:500;
+    color:#000;
+
 }
 .quoteTable div label p {
-    font-weight:500;
+    font-weight:700;
     font-size:1.6rem;
     color:#67C7ba;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-indent:2rem;
 }
 .quoteTable div label:nth-child(2) p{
     font-size:1.4rem;
@@ -160,14 +194,15 @@
     text-align:center;
 }
 .container .quoteAgree {
-    font-size:1rem;
+    font-size:0.8rem;
     width:100%;
     display:flex;
     justify-content:center;
+    padding:0;
 }
 .container .btnQuoteBack {
     height:3rem;
-    width:20rem;
+    width:100%;
     margin:2rem auto;
     background-color:#67C7ba;
     border:none;
@@ -179,7 +214,7 @@
     align-items:center;
 }
 .container .footerMent {
-    font-size:1.2rem;
+    font-size:1.1rem;
     width:100%;
     display:flex;
     justify-content:center;
