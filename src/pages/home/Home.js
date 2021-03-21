@@ -134,7 +134,7 @@ class Home extends Component {
                 <div className='name'>
                     <label>
                         <p className='subject'>기업명</p> 
-                        <input className='textInput' type="text" id='companyName' value={this.state.companyName} onChange={this.handleChange}/>
+                        <input className='textInput' type="text" id='companyName' placeholder='회사 이름을 입력해주세요' value={this.state.companyName} onChange={this.handleChange}/>
                     </label>
                 </div>
                 <div className='business'>
@@ -153,11 +153,11 @@ class Home extends Component {
                     <div className='businessType'>
                         <label>
                             <p>업태</p> 
-                            <input className='textInput' type="text" id='status' value={this.state.status} onChange={this.handleChange}/>
+                            <input className='textInput' type="text" placeholder='업태를 입력해주세요' id='status' value={this.state.status} onChange={this.handleChange}/>
                         </label>
                         <label>
                             <p>업종</p>
-                            <input className='textInput' type="text" id='type' checked={this.state.type} onChange={this.handleChange}/>
+                            <input className='textInput' type="text" placeholder='업종을 입력해주세요' id='type' checked={this.state.type} onChange={this.handleChange}/>
                         </label>
                     </div>
                     <label className='labelCheck'>
@@ -191,7 +191,7 @@ class Home extends Component {
                     <div>
                         <label>
                             <p>4대보험 가입인원</p>
-                            <input className='numberInput' type="number" id='subscribers' min='0' value={this.state.subscribers} onChange={this.handleChange}/>
+                            <input className='numberInput' type="number" placeholder='4대보험에 가입중인 직원 수' id='subscribers' min='0' value={this.state.subscribers} onChange={this.handleChange}/>
                         </label> 
                         <label className='labelCheck'>
                             <p>최저임금준수</p>
@@ -201,7 +201,7 @@ class Home extends Component {
                     <div>
                         <label>
                             <p>4대보험 미가입인원</p>
-                            <input className='numberInput' type="number" id='unsubscribers' min='0' value={this.state.unsubscribers} onChange={this.handleChange}/>
+                            <input className='numberInput' type="number" placeholder='4대보험에 가입중이지 않은 직원 수' id='unsubscribers' min='0' value={this.state.unsubscribers} onChange={this.handleChange}/>
                         </label>
                         <label className='labelCheck'>
                             <p>최저임금준수</p>
@@ -213,11 +213,11 @@ class Home extends Component {
                     <p>추가 고용 계획을 입력해주세요</p>
                     <label>
                         <p>채용 예정 인원</p>
-                        <input className='numberInput' type="number" id='additionalEmployment1' min='0' value={this.state.additionalEmployment1} onChange={this.handleChange}/>
+                        <input className='numberInput' type="number" placeholder='추후 채용 계획에 있는 인원 수' id='additionalEmployment1' min='0' value={this.state.additionalEmployment1} onChange={this.handleChange}/>
                     </label>
                     <label>
                         <p>신규채용자 월 급여</p>
-                        <input className='numberInput' type="number" id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>
+                        <input className='numberInput' type="number" placeholder='채용 예정 직원의 1인당 월 급여' id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>
                     </label>
                 </label>
                 <label className='agreement'>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다&#46;</label>

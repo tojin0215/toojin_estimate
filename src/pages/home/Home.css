@@ -1,7 +1,42 @@
-
 input[type=number]::-webkit-inner-spin-button {  
     height: 2.5rem;
-    padding:0.4rem 0.4rem;
+    padding:0.4rem 0.6rem;
+}
+input::-ms-input-placeholder {
+    color: #C8C8C8;
+    font-size:1rem;
+    text-indent:1rem;
+}
+/* Internet Explorer 10 이상에 적용*/
+input::-webkit-input-placeholder {
+    color: #C8C8C8;
+    font-size:1rem;
+    text-indent:1rem;
+}
+/* Webkit, Blink, Edge에 적용*/
+input::-moz-placeholder {
+    color: #C8C8C8;
+    font-size:1rem;
+    text-indent:1rem;
+}
+/* Mozilla Firefox에 적용 */
+input[type=number]:focus {
+    outline:none;
+    border:1px solid #67C7ba;
+    background-color:#ebf5f4;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+input[type=text]:focus {
+    outline:none;
+    border:1px solid #67C7ba;
+    background-color:#ebf5f4;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+button[type='button']:hover {
+    opacity:.7;
+    transition: 0.5s;
 }
 
 p {
@@ -72,7 +107,8 @@ p {
     height:50px;
     margin:.4rem 0;
     border:1px solid #cecece;
-    text-indent:2rem;
+    border-radius:0.4rem;
+    text-indent:1rem;
     color: #949494;
     font-size: 1.2rem;
 }
@@ -83,7 +119,7 @@ p {
     padding:.6rem 0;
 }
 .AddSalesForm .labelCheck .subject {
-    font-size:1.4rem;
+    font-size:1.2rem;
     color:#000;
 }
 
@@ -112,10 +148,10 @@ p {
     text-align:center;
     border:0px solid #696969;
     border-radius:1rem;
-    background-color:#eee;
+    background-color:#ebf5f4;
     padding:1rem;
     margin-bottom:2rem;
-    height:10rem;
+    height:6rem;
     overflow:auto;
     white-space:normal;
  }
@@ -250,6 +286,23 @@ p {
 }
 
 @media screen and (min-width:426px) {
+    input::-ms-input-placeholder {
+        color: #C8C8C8;
+        font-size:1.2rem;
+        text-indent:1rem;
+    }
+    /* Internet Explorer 10 이상에 적용*/
+    input::-webkit-input-placeholder {
+        color: #C8C8C8;
+        font-size:1.2rem;
+        text-indent:1rem;
+    }
+    /* Webkit, Blink, Edge에 적용*/
+    input::-moz-placeholder {
+        color: #C8C8C8;
+        font-size:1.2rem;
+        text-indent:1rem;
+    }
     .business .explain {
         padding:2rem;
         max-width:768px;
