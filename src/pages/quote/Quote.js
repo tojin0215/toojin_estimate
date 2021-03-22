@@ -71,7 +71,7 @@ class Quote extends Component {
         }
     }
     handleOnClick = (e) => {
-        this.props.history.push('/');
+        this.props.history.push('/home');
     }
 
     render() {        
