@@ -116,7 +116,7 @@ class Home extends Component {
     }
 
     onClickForLink = () => {
-        window.open('https://www.naver.com', '_blank') // url 이동
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLScnh4nIsTeRavmzT6eo3r1KB7Sm5S2SkGwMTREHCWOk1j1H2Q/viewform?usp=sf_link', '_blank') // url 이동
     }
 
     handleDateChange(date) {
@@ -129,14 +129,14 @@ class Home extends Component {
         return (
             <div>
             <div className='Container'>
-            <h3>성공의 파트너, 투진컴퍼니</h3>
+            <h3>성공의 파트너&#44; 투진컴퍼니</h3>
 
             <form className="AddSalesForm">
                 <h3>사전 인터뷰</h3>
                 <div className='name'>
                     <label>
                         <p className='subject'>기업명</p> 
-                        <input className='textInput' type="text" id='companyName' value={this.state.companyName} onChange={this.handleChange}/>
+                        <input className='textInput' type="text" id='companyName' placeholder='회사 이름을 입력해주세요' value={this.state.companyName} onChange={this.handleChange}/>
                     </label>
                 </div>
                 <div className='business'>
@@ -155,11 +155,11 @@ class Home extends Component {
                     <div className='businessType'>
                         <label>
                             <p>업태</p> 
-                            <input className='textInput' type="text" id='status' value={this.state.status} onChange={this.handleChange}/>
+                            <input className='textInput' type="text" placeholder='업태를 입력해주세요' id='status' value={this.state.status} onChange={this.handleChange}/>
                         </label>
                         <label>
                             <p>업종</p>
-                            <input className='textInput' type="text" id='type' checked={this.state.type} onChange={this.handleChange}/>
+                            <input className='textInput' type="text" placeholder='업종을 입력해주세요' id='type' checked={this.state.type} onChange={this.handleChange}/>
                         </label>
                     </div>
                     <label className='labelCheck'>
@@ -167,18 +167,33 @@ class Home extends Component {
                         <p className='subject'>성장유망업종</p>
                     </label>
                     <label className='explain'>
-                        <p>성장유망업종이란?</p>
-                        <label>설명</label>
+                        <p>성장유망업종이란&#63;</p>
+                        <label>
+                            <h6>사업 지침에 따른 특별 지원대상 업종</h6>
+                            <p>
+                            ① 벤처기업<br/>
+                            ② 지식서비스산업<br/>
+                            ③ 문화콘텐츠산업<br/>
+                            ④ 신･재생에너지산업분야 관련 업종<br/>
+                            ⑤ 성장유망업종(전․후방산업)<br/>
+                            ⑥ 청년 창업기업<br/>
+                            ⑦ 혁신형 중소기업(이노비즈, 메인비즈),  IT직무를 수행할 수 있는 기업<br/>
+                            <br/>
+                            <span>
+                                문의을 통해 해당 사항에 대한 안내 및 자세한 상담을 할 수 있습니다.
+                            </span> 
+                            </p>
+                        </label>
                     </label>
                 </div>
                 <div className='member'>
                     <label className='subject'>
-                        <p>기존 직원 정보를 입력해주세요</p>    
+                        <p>기존 직원 정보</p>    
                     </label>
                     <div>
                         <label>
                             <p>4대보험 가입인원</p>
-                            <input className='numberInput' type="number" id='subscribers' min='0' value={this.state.subscribers} onChange={this.handleChange}/>
+                            <input className='numberInput' type="number" placeholder='4대보험에 가입중인 직원 수' id='subscribers' min='0' value={this.state.subscribers} onChange={this.handleChange}/>
                         </label> 
                         <label className='labelCheck'>
                             <p>최저임금준수</p>
@@ -188,7 +203,7 @@ class Home extends Component {
                     <div>
                         <label>
                             <p>4대보험 미가입인원</p>
-                            <input className='numberInput' type="number" id='unsubscribers' min='0' value={this.state.unsubscribers} onChange={this.handleChange}/>
+                            <input className='numberInput' type="number" placeholder='4대보험에 가입중이지 않은 직원 수' id='unsubscribers' min='0' value={this.state.unsubscribers} onChange={this.handleChange}/>
                         </label>
                         <label className='labelCheck'>
                             <p>최저임금준수</p>
@@ -200,36 +215,39 @@ class Home extends Component {
                     <p>추가 고용 계획을 입력해주세요</p>
                     <label>
                         <p>채용 예정 인원</p>
-                        <input className='numberInput' type="number" id='additionalEmployment1' min='0' value={this.state.additionalEmployment1} onChange={this.handleChange}/>
+                        <input className='numberInput' type="number" placeholder='추후 채용 계획에 있는 인원 수' id='additionalEmployment1' min='0' value={this.state.additionalEmployment1} onChange={this.handleChange}/>
                     </label>
                     <label>
                         <p>신규채용자 월 급여</p>
-                        <input className='numberInput' type="number" id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>
+                        <input className='numberInput' type="number" placeholder='채용 예정 직원의 1인당 월 급여' id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>만 원
                     </label>
                 </label>
-                <label className='agreement'>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다.</label>
+                <label className='agreement'>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다&#46;</label>
                 <div className='program'>
                     <label className='subject'>
                         <p>지원 프로그램</p>
                     </label>
 
                     <label className='prName'>{/*<input type="checkbox" id='proA' checked={this.state.proA} onChange={this.handleChange}/>*/}
-                        <p>청년 디지털 지원 사업(1~6개월)</p>
+                        <p>청년 디지털 지원 사업<br />&#40;1~6개월&#41;</p>
                     </label>
-                    <label className='prContent'> : 1인 당 최대 월190만 원 </label>
+                    <label className='prContent'> 1인 당 최대 월190만 원
+                    <p className='prContentSub'>&#40;급여 200만원 이하 &#58; 90&#37; &#43; 10만원 지원&#41;</p>
+                    </label>
                     <label className='prName'>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}
-                        <p>청년추가고용 장려금 지원사업(최대30개월)</p>
+                        <p>청년추가고용 장려금 지원사업<br />&#40;최대30개월&#41;</p>
                     </label>
-                    <label className='prContent'> : 1인 당 월75만 원</label>
+                    <label className='prContent'> 1인 당 월75만 원</label>
                     <label className='prName'>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}
-                        <p>일자리 안정자금 사업<br/>(최대30개월)</p>
+                        <p>일자리 안정자금 사업<br/>&#40;최대30개월&#41;</p>
                     </label>
-                    <label className='prContent'> : 1인 당 월8만 원</label>
+                    <label className='prContent'> 1인 당 월8만 원</label>
                 </div>
                 <button className='btnConsult btnResult' type="button" onClick={this.onClickForLink}> 상담하기 </button>
                 <button className='btnEstimate' type="button" onClick={this.handleOnClick}> 견적하기 </button>
                 <button className='btnReset' type="button" onClick={this.initOnClick}> 초기화 </button>
-                <label className='footerMent'>중소기업의 경영파트너, 투진컴퍼니</label>
+
+                <label className='footerMent'>중소기업의 경영파트너&#44; 투진컴퍼니</label>
 
             </form>
         </div>

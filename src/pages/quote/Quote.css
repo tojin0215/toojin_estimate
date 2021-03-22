@@ -1,0 +1,285 @@
+.container {
+    padding:1rem;
+}
+
+.container h2{
+    font-size:2rem;
+    color:#67C7ba;
+}
+.container label {
+    padding:1rem 0;
+    font-size:2rem;
+    color:#696969;
+    font-weight:500;
+}
+.container span {
+    font-weight:300;
+    font-size:1.2rem;
+}
+.company {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border-bottom:1px solid #67C7ba;
+    padding-bottom:1rem;
+}
+.companyBasic {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-top:1rem;
+    border-bottom:1px solid #67C7ba;
+}
+.companyBasic label {
+    font-size:1.4rem;
+    text-align:left;
+}
+.companyBasic label:first-child{
+    padding-bottom:0.2rem;
+}
+.companyBasic label:last-child{
+    padding-top:0;
+}
+.companyBasic p {
+    font-size:2rem;
+    color:#000;
+}
+.companyType {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    width:100%;
+    padding:1.4rem 0 0 0;
+}
+.companyType label {
+    box-sizing:border-box;
+    width:50%;
+    font-size:1.4rem;
+    padding:0.4rem;
+    text-align:left;
+}
+.companyType label:last-child {
+    width:100%;
+    max-width:20rem;
+    text-align:left;
+    font-weight:400;
+    font-size:1.2rem;
+    color:#696969;
+    margin:0 auto;
+    padding:0.4rem;
+    display:flex;
+    flex-direction:row;
+    border-radius:1rem;
+    background-color:#e5f3f1;
+}
+.companyType label:last-child span {
+    flex:1;
+    text-align:center;
+}
+.companyType label:last-child p {
+    flex:1;
+}
+.companyType label p {
+    text-align:center;
+    color:#000;
+}
+.quoteMember {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+.quoteMember label {
+    text-align:left;
+    padding:0.4rem;
+    width:50%;
+    box-sizing:border-box;
+}
+.quoteMember label:first-child {
+    padding:1rem 0;
+    width:100%;
+    text-align:left;
+    display:none;
+}
+.quoteMember label span {
+    font-weight:300;
+    font-size:1.2rem;
+}
+.quoteMember label p {
+    font-size:1.4rem;
+    text-align:center;
+    color:#000;
+}
+.quoteMember .plan {
+    width:100%;
+    max-width:20rem;
+    display:flex;
+    margin:0 auto;
+    flex-direction:row;
+    border-radius:1rem;
+    background-color:#e5f3f1;
+}
+.plan span {
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.plan p {
+    flex:1;
+}
+.quoteTable {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    padding-top:2rem;
+}
+.quoteTable .tCommon {
+    width:100%;
+    font-size:1.2rem;
+    text-align:center;
+    font-weight:300;
+    border-top:1px solid #d9f1ee;
+    border-bottom:1px solid #d9f1ee;
+    margin-bottom:2rem;
+}
+.quoteTable .tCommon p {
+    font-weight:500;
+    font-size:1.4rem;
+}
+.quoteTable div {
+    display:flex;
+    flex-wrap:wrap;
+    border:1px solid #67C7ba;
+    border-radius:1.2rem;
+    padding:1rem 0.4rem;
+    margin-bottom:2rem;
+    width:100%;
+    max-width:768px;
+}
+.quoteTable div label {
+    width:100%;
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:400;
+    padding:0.6rem 0;
+}
+.quoteTable span {
+    font-size:1.2rem;
+    color:#696969;
+    font-weight:300;
+    text-indent:1rem;
+}
+.quoteTable .subject {
+    font-size:1.4rem;
+    font-weight:600;
+    width:100%;
+    padding:1rem 2rem;
+    color:#000;
+}
+.quoteTable > .subject {
+    font-size:1.6rem;
+    padding:1rem 0;
+    font-weight:500;
+    color:#000;
+
+}
+.quoteTable div label p {
+    font-weight:700;
+    font-size:1.6rem;
+    color:#67C7ba;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-indent:2rem;
+}
+.quoteTable div label:nth-child(2) p{
+    font-size:1.4rem;
+    color:#C76767;
+}
+.quoteTable .quoteMent {
+    font-size:0.8rem;
+    color:#67C7ba;
+    width:100%;
+    text-align:center;
+}
+.container .quoteAgree {
+    font-size:0.8rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:0;
+}
+.container .btnQuoteBack {
+    height:3rem;
+    width:100%;
+    max-width:425px;
+    margin:2rem auto;
+    background-color:#67C7ba;
+    border:none;
+    border-radius:0.4rem;
+    color:#fff;
+    font-size:1.2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container .footerMent {
+    font-size:1.1rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+@media screen and (min-width:426px) {
+    .container h2 {
+        padding:0 15%;
+    }
+    .quoteTable > .subject {
+        text-align:center;
+    }
+    .companyBasic {
+        align-items: center;
+    }
+    .companyBasic label {
+        text-align: center;
+    }
+    .companyType label {
+        text-align:center;
+    }
+    .quoteMember label {
+        text-align:center;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:768px) {
+    .companyType label:last-child {
+        text-align:center;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .companyType {
+        width:70%;
+    }
+    .quoteMember {
+        width:70%;
+    }
+    .quoteTable div {
+        margin:0 auto 2rem;
+    }
+}
+@media screen and (min-width:1025px) {
+    .container h2 {
+        padding:0 20%;
+    }
+    .companyType {
+        width:60%;
+    }
+    .quoteMember {
+        width:60%;
+    }
+    .quoteTable div {
+        margin:0 auto 2rem;
+    }
+}

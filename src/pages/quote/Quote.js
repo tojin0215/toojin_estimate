@@ -2,12 +2,23 @@ import React, { Component } from 'react';
 
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import './Quote.css';
+
+const meta = document.createElement('meta');
+meta.name = "viewport";
+meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover";
+document.getElementsByTagName('head')[0].appendChild(meta);
 
 class Quote extends Component {
 
     constructor(props) {
         super(props);
         this.state = JSON.parse(localStorage.getItem('data'));
+
+        const meta = document.createElement('meta');
+        meta.name = "viewport";
+        meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover";
+        document.getElementsByTagName('head')[0].appendChild(meta);
     };
     componentDidMount(){
         if(this.state.additionalEmployment1 > 0 && this.state.additionalEmployment2 > 0){
@@ -54,7 +65,6 @@ class Quote extends Component {
             this.setState({ 
                 totalMonthPay:this.state.additionalEmployment1*this.state.additionalEmployment2,
                 monthExpense :this.state.additionalEmployment1*15 + 15,
-                totalExpense :(this.state.additionalEmployment1*15+15)*36,
             })
             
 
@@ -66,50 +76,106 @@ class Quote extends Component {
 
     render() {        
         return (
-            <div>
-            <h2></h2>
-            <form>
-                <hr/>
-                <label>기업명 : {this.state.companyName}</label><br />
+        <div className='container'>
+        <h2>견적 결과</h2>
+        <form>
+            <div className='company'>
+            <div className='companyBasic'>
+                <label>
+                    <span>기업명</span>
+                    <p>{this.state.companyName}</p>
+                </label>
                 {/*<label>고객 사업자/법인등록번호 : </label><br /><br/>*/}
-                <label>{this.state.radioGroup.businessType1==true?"개인사업자":this.state.radioGroup.businessType2===true?"법인사업자":""}</label><br/><br/>
-                
-                <label>업태 : {this.state.status}</label><br/>
-                <label>업종 : {this.state.type}</label><br/>
-                <label>성장유망업종 : {this.state.businessType3?"O":"X"}</label><br/><br/>
-                
-                <label>기존 직원 정보</label><br />
-                <label>4대보험 가입 직원 수 : {this.state.subscribers}명</label><br />
-                <label>4대보험 미가입 직원 수 : {this.state.unsubscribers}명</label><br />
-                <label>추가 고용 계획 : {this.state.additionalEmployment1}명</label><br /><br/>
-                <label>간이 견적표</label><br />
+                <label>{this.state.radioGroup.businessType1==true?"개인사업자":this.state.radioGroup.businessType2===true?"법인사업자":""}</label>
+            </div>
+            <div className='companyType'>
+                <label>
+                    <span>업태</span>
+                    <p>{this.state.status}</p>
+                </label>
+                <label>
+                    <span>업종</span>
+                    <p>{this.state.type}</p>
+                </label>
+                <label>
+                    <span>성장유망업종</span>
+                    <p>{this.state.businessType3?"O":"X"}</p>
+                </label>
+            </div>
+            <div className='quoteMember'>
+                <label>직원 정보</label>
+                <label>
+                    <span>4대보험 가입</span>
+                    <p>{this.state.subscribers} 명</p>
+                </label>
+                <label>
+                    <span>4대보험 미가입</span>
+                    <p>{this.state.unsubscribers} 명</p>
+                </label>
+                <label className='plan'>
+                    <span>채용 예정 직원</span>
+                    <p>{this.state.additionalEmployment1}명</p>
+                </label>
+            </div>
+            </div>
+            <div className='quoteTable'>
+                <label className='subject'>간이 견적표</label>
+                <label className='tCommon'>
+                    월 비용
+                    <p>{this.state.monthExpense}<span>만 원</span></p>
+                </label>
+                <div className='proA'>
+                <label className='subject'>청년 디지털 지원 사업</label>
+                <label>
+                    총 비용
+                    <p>{this.state.monthExpense *6}<span>만 원</span></p>
+                </label>
+                <label>
+                    최대지원금액
+                    <p>{this.state.proA}<span>만 원</span></p>
+                </label>
+                <label>
+                    최대고객이익
+                    <p>{this.state.proA/(this.state.monthExpense *6)}<span>만 원</span></p>
+                </label>
+                </div>
+                <div className='proB'>
+                <label className='subject'>청년추가고용 장려금 <br />지원사업</label>
+                <label>
+                    총 비용
+                    <p>{this.state.monthExpense *30}<span>만 원</span></p>
+                </label>
+                <label>
+                    최대지원금액
+                    <p>{this.state.proB}<span>만 원</span></p>
+                </label>
+                <label>
+                    최대고객이익
+                    <p>{this.state.proB/(this.state.monthExpense *30)}<span>만 원</span></p>
+                </label>
+                </div>
+                <div className='proC'>
+                <label className='subject'>일자리 안정자금 사업</label>
+                <label>
+                    총 비용
+                    <p>{this.state.monthExpense *30}<span>만 원</span></p>
+                </label>
+                <label>
+                    최대지원금액
+                    <p>{this.state.proC}<span>만 원</span></p>
+                </label>
+                <label>
+                    최대고객이익
+                    <p>{this.state.proC /(this.state.monthExpense * 30)}<span>만 원</span></p>
+                </label>
+                </div>
+                <label className='quoteMent'>위 견적은 간이 견적으로 실제 견적과 차이가 있을 수 있습니다.</label>
+            </div>
 
-
-                {/*<label>총 월급여액 : {this.state.totalMonthPay}원</label><br/>*/}
-                <label>월 비용 : {this.state.monthExpense}만 원</label><br/>
-                
-                <label>proA</label><br />
-                <label>총 비용 : {this.state.monthExpense * 6}만 원</label><br/>
-                <label>최대지원금액 : {this.state.proA}만 원</label><br/>
-                <label>최대고객이익 : {this.state.proA - (this.state.totalMonthPay+this.state.monthExpense) * 36}만 원</label><br/>
-
-                <label>proB</label><br />
-                <label>총 비용 : {this.state.monthExpense * 30}만 원</label><br/>
-                <label>최대지원금액 : {this.state.proB}만 원</label><br/>
-                <label>최대고객이익 : {this.state.proB - (this.state.totalMonthPay+this.state.monthExpense) * 36}만 원</label><br/>
-
-                <label>proC</label><br />
-                <label>총 비용 : {this.state.monthExpense *30}만 원</label><br/>
-                <label>최대지원금액 : {this.state.proC}만 원</label><br/>
-                <label>최대고객이익 : {this.state.proC - (this.state.totalMonthPay+this.state.monthExpense)*36}만 원</label><br/><br/>
-
-                <label>위 견적은 간이 견적으로 실제 견적과 차이가 있을 수 있습니다.</label><br/><br/>
-
-                <label>기업정보를 투진컴퍼니에 제공하는 것에 동의합니다.</label><br/><br/>
-                <label>중소기업의 든든한 파트너, 투진컴퍼니</label><br/>
-                <br/>
-                <button className="btn btn-lg btn-primary btn-block" type="button" onClick={this.handleOnClick}> 돌아가기 </button>
-            </form>
+            <label className='quoteAgree'>기업정보를 투진컴퍼니에 제공하는 것에 동의합니다.</label>
+            <button className="btn btn-lg btn-primary btn-block btnQuoteBack" type="button" onClick={this.handleOnClick}> 돌아가기 </button>
+            <label className='footerMent'>중소기업의 든든한 파트너, 투진컴퍼니</label>
+        </form>
         </div>
         );
     }
