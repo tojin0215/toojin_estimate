@@ -24,14 +24,14 @@ class Quote extends Component {
         if(this.state.additionalEmployment1 > 0 && this.state.additionalEmployment2 > 0){
             //pro A 최대 지원금
             if(this.state.additionalEmployment2 < 200){
-                this.setState({proA: (this.state.additionalEmployment2*0.9+10)*6 * this.state.additionalEmployment1})
+                this.setState({proA: (this.state.additionalEmployment2*0.9+10)*6*this.state.additionalEmployment1})
             }else{
-                this.setState({proA: 190*6 * this.state.additionalEmployment1})
+                this.setState({proA: 190*6*this.state.additionalEmployment1})
             }
             //pro B 최대 지원금
-            this.setState({proB: this.state.additionalEmployment1*75*30})
+            this.setState({proB: 75*30*this.state.additionalEmployment1})
             //pro C 최대 지원금
-            this.setState({proC: this.state.additionalEmployment1*8*30})
+            this.setState({proC: 8*30*this.state.additionalEmployment1})
 
             /*this.setState({ 
                 totalMonthPay:this.state.additionalEmployment1*this.state.additionalEmployment2,
@@ -64,7 +64,7 @@ class Quote extends Component {
             
             this.setState({ 
                 totalMonthPay:this.state.additionalEmployment1*this.state.additionalEmployment2,
-                monthExpense :this.state.additionalEmployment1*15 + 15,
+                monthExpense :this.state.additionalEmployment1*15,
             })
             
 
@@ -73,7 +73,9 @@ class Quote extends Component {
     handleOnClick = (e) => {
         this.props.history.push('/home');
     }
-
+    onClickForLink = () => {
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLScnh4nIsTeRavmzT6eo3r1KB7Sm5S2SkGwMTREHCWOk1j1H2Q/viewform?usp=sf_link', '_blank') // url 이동
+    }
     render() {        
         return (
         <div className='container'>
@@ -128,22 +130,22 @@ class Quote extends Component {
                 <label className='subject'>청년 디지털 지원 사업</label>
                 <label>
                     총 비용
-                    <p>{this.state.monthExpense *6}<span>만 원</span></p>
+                    <p>{(this.state.additionalEmployment2 *6).toLocaleString()}<span>만 원</span></p>
                 </label>
                 <label>
                     최대지원금액
-                    <p>{this.state.proA}<span>만 원</span></p>
+                    <p>{this.state.proA.toLocaleString()}<span>만 원</span></p>
                 </label>
                 <label>
                     최대고객이익
-                    <p>{this.state.proA/(this.state.monthExpense *6)}<span>만 원</span></p>
+                    <p>{((this.state.proA/(this.state.additionalEmployment2 *6*this.state.additionalEmployment1)) * 100)}<span>%</span></p>
                 </label>
                 </div>
                 <div className='proB'>
                 <label className='subject'>청년추가고용 장려금 <br />지원사업</label>
                 <label>
                     총 비용
-                    <p>{this.state.monthExpense *30}<span>만 원</span></p>
+                    <p>{this.state.additionalEmployment2 *30}<span>만 원</span></p>
                 </label>
                 <label>
                     최대지원금액
@@ -151,14 +153,14 @@ class Quote extends Component {
                 </label>
                 <label>
                     최대고객이익
-                    <p>{this.state.proB/(this.state.monthExpense *30)}<span>만 원</span></p>
+                    <p>{((this.state.proB/(this.state.additionalEmployment2 *30*this.state.additionalEmployment1))* 100).toFixed(2)}<span>%</span></p>
                 </label>
                 </div>
                 <div className='proC'>
                 <label className='subject'>일자리 안정자금 사업</label>
                 <label>
                     총 비용
-                    <p>{this.state.monthExpense *30}<span>만 원</span></p>
+                    <p>{this.state.additionalEmployment2 *30}<span>만 원</span></p>
                 </label>
                 <label>
                     최대지원금액
@@ -166,13 +168,14 @@ class Quote extends Component {
                 </label>
                 <label>
                     최대고객이익
-                    <p>{this.state.proC /(this.state.monthExpense * 30)}<span>만 원</span></p>
+                    <p>{((this.state.proC /(this.state.additionalEmployment2 * 30*this.state.additionalEmployment1))* 100).toFixed(2)}<span>%</span></p>
                 </label>
                 </div>
                 <label className='quoteMent'>위 견적은 간이 견적으로 실제 견적과 차이가 있을 수 있습니다.</label>
             </div>
 
             <label className='quoteAgree'>기업정보를 투진컴퍼니에 제공하는 것에 동의합니다.</label>
+            <button className='btn btn-lg btn-primary btn-block btnQuoteBack btnQuoteSubmit' type="button" onClick={this.onClickForLink}> 상담하기 </button>
             <button className="btn btn-lg btn-primary btn-block btnQuoteBack" type="button" onClick={this.handleOnClick}> 돌아가기 </button>
             <label className='footerMent'>중소기업의 든든한 파트너, 투진컴퍼니</label>
         </form>

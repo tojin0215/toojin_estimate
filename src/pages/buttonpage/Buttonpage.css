@@ -285,6 +285,17 @@ p {
     padding:2rem 0;
 }
 
+.quoteIntro .logo {
+    margin:0 auto;
+    text-indent:-9999px;
+    width:80%;
+    max-width:800px;
+    height:400px;
+    display:block;
+    background:url(../../img/tojin2.png) no-repeat center;
+    background-size:100% auto;
+}
+
 @media screen and (min-width:426px) {
     input::-ms-input-placeholder {
         color: #C8C8C8;

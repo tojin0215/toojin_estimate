@@ -115,9 +115,7 @@ class Home extends Component {
         },() => {localStorage.setItem('data', JSON.stringify(this.state));});
     }
 
-    onClickForLink = () => {
-        window.open('https://docs.google.com/forms/d/e/1FAIpQLScnh4nIsTeRavmzT6eo3r1KB7Sm5S2SkGwMTREHCWOk1j1H2Q/viewform?usp=sf_link', '_blank') // url 이동
-    }
+    
 
     handleDateChange(date) {
         this.setState({
@@ -218,8 +216,8 @@ class Home extends Component {
                         <input className='numberInput' type="number" placeholder='추후 채용 계획에 있는 인원 수' id='additionalEmployment1' min='0' value={this.state.additionalEmployment1} onChange={this.handleChange}/>
                     </label>
                     <label>
-                        <p>신규채용자 월 급여</p>
-                        <input className='numberInput' type="number" placeholder='채용 예정 직원의 1인당 월 급여' id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>만 원
+                        <p>신규채용자 월 급여 (단위:만 원)</p>
+                        <input className='numberInput' type="number" placeholder='채용 예정 직원의 1인당 월 급여' id='additionalEmployment2' min='0' value={this.state.additionalEmployment2} onChange={this.handleChange}/>
                     </label>
                 </label>
                 <label className='agreement'>위 기업정보를 투진컴퍼니에서 활용하는데에 동의합니다&#46;</label>
@@ -243,7 +241,6 @@ class Home extends Component {
                     </label>
                     <label className='prContent'> 1인 당 월8만 원</label>
                 </div>
-                <button className='btnConsult btnResult' type="button" onClick={this.onClickForLink}> 상담하기 </button>
                 <button className='btnEstimate' type="button" onClick={this.handleOnClick}> 견적하기 </button>
                 <button className='btnReset' type="button" onClick={this.initOnClick}> 초기화 </button>
 

@@ -212,11 +212,11 @@
     padding:0;
 }
 .container .btnQuoteBack {
-    height:3rem;
+    height:2.6rem;
     width:100%;
     max-width:425px;
-    margin:2rem auto;
-    background-color:#67C7ba;
+    margin:5px auto;
+    background-color:#c76767;
     border:none;
     border-radius:0.4rem;
     color:#fff;
@@ -224,6 +224,9 @@
     display:flex;
     justify-content:center;
     align-items:center;
+}
+.container form .btnQuoteSubmit {
+    background-color:#67C7ba;
 }
 .container .footerMent {
     font-size:1.1rem;

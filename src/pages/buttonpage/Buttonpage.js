@@ -18,7 +18,8 @@ class Buttonpage extends Component {
     }
     render() {        
         return (
-            <div>
+            <div className='quoteIntro'>
+                <h1 className='logo'>투진 컴퍼니</h1>
                 <form className="AddSalesForm">
                     <button className='btnEstimate' type="button" onClick={this.handleOnClick}> 견적하기 </button>
                 </form>
