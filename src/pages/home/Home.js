@@ -233,7 +233,7 @@ class Home extends Component {
                     <p className='prContentSub'>&#40;급여 200만원 이하 &#58; 90&#37; &#43; 10만원 지원&#41;</p>
                     </label>
                     <label className='prName'>{/*<input type="checkbox" id='proB' checked={this.state.proB} onChange={this.handleChange}/>*/}
-                        <p>청년추가고용 장려금 지원사업<br />&#40;최대30개월&#41;</p>
+                        <p>청년 특별 채용 장려금<br />&#40;최대12개월&#41;</p>
                     </label>
                     <label className='prContent'> 1인 당 월75만 원</label>
                     <label className='prName'>{/*<input type="checkbox" id='proC' checked={this.state.proC} onChange={this.handleChange}/>*/}
